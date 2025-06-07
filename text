@@ -1,0 +1,95 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week two</title>
+</head>
+<body>
+    <h1>Product Calculator</h1>
+    <p>This example stores the values of two variables, and calculates their product</p>
+    <p id="result"></p>
+    <p id="text">hello</p>
+    <button onclick="document.getElementById ('text').innerHTML = 'You clicked a button'" >Click me</button>
+
+    <p id="result">Result will be displayed here</p>
+    <p>This paragraph does not change</p>
+    <button onclick="compareNumber()">Compare Numbers</button> 
+
+    <button id="processButton" onclick="processNumbers()">Compare Numbers</button> 
+    <div id="output">  </div>
+    <div>No change here</div>
+</body>
+<script>
+  function compareNumber(){
+        var num1 = 10;
+        var num2 = 20;
+
+        var resultElement = document.getElementById("result");
+
+        if (num1 > num2){
+            resultElement.innerHTML = num1 + " is greater than " + num2;
+        }
+        else if (num1 < num2){
+            resultElement.innerHTML = num1 + " is less than " + num2;
+        }
+        else{
+            resultElement.innerHTML = num1 + " is equal to " + num2;
+        }
+        }
+    function processNumbers(){
+        let numbers = [1, 2, 3, 4, 5];
+        let result = " ";
+
+        for (let i = 0; i < numbers .length; i++) {
+            result += 'Numbers: ' + numbers[i] + '<br>';
+
+        }
+        document.getElementById('output').innerHTML = result;
+    }
+  
+
+
+  codeacademy asignment
+myAge variable declared
+let myAge = 23;
+
+earlyYears variable declared
+let earlyYears = 2;
+earlyYears = 2 * 10.5;
+
+
+laterYears variable declated and subtraction operator applied 
+let laterYears = myAge - 2;
+
+multiplication operator applied
+laterYears *= 4;
+console.log(laterYears);
+
+console.log(earlyYears);
+
+myAgeInDogYears variable declared
+let myAgeInDogYears = earlyYears + laterYears;
+console.log(myAgeInDogYears);
+
+variable declared and .toLowerCase method is also used
+let myName = "Amarachi";
+myName = myName.toLowerCase();
+console.log(myName);
+
+console.log(`my name is ${myName}. I am ${myAge} . and ${myAgeInDogYears} in dog years.`)
+
+myhumanAge = 4;
+
+or just use function
+function convertToDogYears(age) {
+    let earlyYears = 2 * 10.5;
+    let laterYears = (age - 2) * 4;
+    return earlyYears + laterYears;
+  }
+  
+  myAgeInDogYears = convertToDogYears(myAge);
+
+
+</script>
+</html> -->
