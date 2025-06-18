@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grids</title>
+    <title>Adds On</title>
     <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
         img{
             width: 200px;
             border-radius: 20px;
         }
+       
         .grid-container{
             display: grid;
             grid-template-columns: 200px 200px;
@@ -17,6 +22,7 @@
         .wrapper{
             display: flex;
             justify-content: center;
+            padding: 1rem;
         }
         button{
             background-color: blueviolet;
@@ -29,6 +35,7 @@
             cursor: pointer;
             display: block;
             margin: 2rem auto;
+            font-weight: bold;
         }
         button:hover{
             background-color: cadetblue;    
@@ -39,9 +46,28 @@
             /* height: 50%; */
         }
         .box{
-            background-color: darkcyan;
-             width: 100%;
+            background-color: black;
+            color: white;
+            width: 100%;
             height: 100vh;
+        }
+        .box-two{
+            background-color: yellow;
+            width: 400px;
+            height: 50vh;
+            margin: 0 auto;
+        }
+        .circle{
+            border: 1px solid red;
+            text-align: center;
+            padding: 2rem;
+            width: 50%;
+            margin: 2rem auto;
+        }
+        .coolAsf{
+            border-radius: 10px;
+            background-color: rgb(61, 138, 114);
+            
         }
     </style>
 </head>
@@ -55,20 +81,55 @@
                 <img src="https://i.guim.co.uk/img/media/318de6ff3c90adbf439fe9631b3deea919740daf/0_77_4752_2851/master/4752.jpg?width=620&quality=45&fit=max&dpr=2&s=c531e0f6b1e1db245d0866dcc394a033" alt="">
             </div>
         </div>
-         <button> Dark Theme Button</button>
+        <button> Dark Theme Button</button>         
     </div>
+
+    <div class="second-box"></div>
+    <button class="secondButton" onclick="addBox()">Add Button </button>
+
+    <div class="circle">
+        <h1 id="heading-one">This is heading</h1>
+        <h2 id="heading-two">This is sub-heading</h2>
+    </div>
+        <button class="third-button">Greet User</button>
     
 
+    
 
     <script>
         
-        function darkTheme() {
-            let themeBox = document.querySelector(".container");
-            themeBox.classList.toggle("box");
+        function darkTheme() {   
+            let themeBox = document.querySelector("body");
+            themeBox.classList.toggle("box");   
         }
         let button = document.querySelector("button");
         button.addEventListener("click", darkTheme);
 
+
+        function addBox(){ 
+            document.querySelector(".second-box").classList.add("box-two");
+        }
+       
+
+        function greetUser(){
+            
+            document.querySelector(".circle").classList.replace('shape-circle', 'coolAsf');
+
+            let headingOne = document.getElementById ("heading-one");
+            let headingTwo = document.getElementById ("heading-two");
+
+
+            let user = prompt("what is your name?");
+            let country  = prompt ("where are you from");
+            headingOne.innerHTML = user;  
+            headingTwo.innerHTML = country;
+
+           
+
+
+        }
+        let thirdButton = document.querySelector(".third-button");
+        thirdButton.addEventListener("click", greetUser);
     </script>
 </body>
 </html>
